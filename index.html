@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="load()">
+    <h1>Gestión de Empleados</h1>
+    
+    <h2>Registro de Empleado</h2>
+    <form id="employeeForm">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" required>
+
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" required>
+
+        <label for="departamento">Departamento:</label>
+        <select id="departamento" required>
+            <!-- Aquí debes llenar las opciones con los departamentos disponibles -->
+        </select>
+
+        <label for="municipio">Municipio:</label>
+        <select id="municipio" required>
+            <!-- Aquí debes llenar las opciones con los municipios disponibles según el departamento -->
+        </select>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" required>
+
+        <label for="salario">Salario:</label>
+        <input type="text" id="salario" required>
+
+        <button type="button" id="agregarEmpleado">Agregar Empleado</button>
+    </form>
+
+    <h2>Lista de Empleados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellidos y Nombres</th>
+                <th>Ciudad</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody id="employeeList">
+            <!-- Aquí se agregarán los registros de empleados -->
+        </tbody>
+    </table>
+
+    <h2>Buscar Empleado por ID</h2>
+    <form id="searchForm">
+        <label for="buscarId">Buscar por ID:</label>
+        <input type="number" id="buscarId" required>
+        <button type="button" id="buscarEmpleado">Buscar</button>
+    </form>
+
+    <script src="Scripts.js"></script>
+</body>
+</html>
